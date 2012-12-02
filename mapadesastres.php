@@ -28,14 +28,39 @@
 		echo "};\n";
 		echo "var map = new google.maps.Map(document.getElementById('map_canvas'),myOptions);\n";
 				
+		echo "marcarSitioActual(latlng,map);";
+		if($_GET){
+			$Distancia=$_GET['Distancia'];
+			$Tiempo=$_GET['Tiempo'];
+		}else{
+			$Distancia=10;
+			$Tiempo="Today";
+		}
+		echo "var latMax=latitud+".($Distancia/111).";\n";
+		echo "var latMin=latitud-".($Distancia/111).";\n";
+		echo "var longMax=longitud+".($Distancia/111).";\n";
+		echo "var longMin=longitud-".($Distancia/111).";\n";
+
 		$Dataset=obtenerSismos();
 		$indice=0; 
 		foreach ($Dataset as $Sismo){
 			if($indice==0){
 				$indice=1;
 			}else{
-				echo "var latlng=new google.maps.LatLng(".$Sismo[7].",".$Sismo[8].");\n";
-				echo "marcarLugar('".$Sismo[0]."','".$Sismo[1]."','".$Sismo[2]."','".$Sismo[3]."','".$Sismo[4]."','".$Sismo[5]."','".$Sismo[6]."',latlng,map);\n";
+				if($Tiempo=="Today"){
+					$hoy = date("d/m/y");
+					if("11/22/12"==$Sismo[0]){
+						echo "if((".$Sismo[7].">latMin)&&(".$Sismo[7]."<latMax)&&(".$Sismo[8].">longMin)&&(".$Sismo[8]."<longMax)){\n";
+						echo "var latlng=new google.maps.LatLng(".$Sismo[7].",".$Sismo[8].");\n";
+						echo "marcarLugar('".$Sismo[0]."','".$Sismo[1]."','".$Sismo[2]."','".$Sismo[3]."','".$Sismo[4]."','".$Sismo[5]."','".$Sismo[6]."',latlng,map);\n";
+						echo "}\n";
+					}
+				}else{
+					echo "if((".$Sismo[7].">latMin)&&(".$Sismo[7]."<latMax)&&(".$Sismo[8].">longMin)&&(".$Sismo[8]."<longMax)){\n";
+					echo "var latlng=new google.maps.LatLng(".$Sismo[7].",".$Sismo[8].");\n";
+					echo "marcarLugar('".$Sismo[0]."','".$Sismo[1]."','".$Sismo[2]."','".$Sismo[3]."','".$Sismo[4]."','".$Sismo[5]."','".$Sismo[6]."',latlng,map);\n";
+					echo "}\n";
+				}
 			}
 		}
 	echo "}\n";
@@ -43,6 +68,17 @@
 ?>
 	
 	<script type="text/javascript">
+	function marcarSitioActual(LATLONG,mapa){
+		var marker = new google.maps.Marker({ //opciones
+      		position: LATLONG,
+      		//Decimos que la posición es la de la variable 'coordenadas'
+      		map: mapa,
+      		//Nombre del mapa
+      		title:"Esta es mi ubicación actual"
+      		//Titulo (visible cuando colocamos el ratón sobre el punto)
+  		});
+	}
+	
 	function marcarLugar(Fecha,Hora,Magnitud,Profundidad,Localizacion,Causa,Origen,LATLONG,mapa){
 		var texto = "Fecha:"+Fecha+"\nHora:"+Hora+"\nMagnitud:"+Magnitud+"\nProfundidad:"+Profundidad+"\nCausa:"+Causa+"\nLugar:"+Origen;
 		var marker = new google.maps.Marker({ //opciones

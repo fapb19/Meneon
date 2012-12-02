@@ -9,9 +9,10 @@
 <div id="wrapper">
   <div id="header">
     <div id="navbar">
-    	<a href="default.php">HOME</a>
-        <a href="Mapas.php">MAPA</a>
-        <a href="">ALBERGUES</a>
+    	<a href="default.php">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Mapas.php">MAPAS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Clima.php">CLIMA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="">ALBERGUES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="">REDES SOCIALES</a>
     </div>
   </div>
