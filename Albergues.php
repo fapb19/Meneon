@@ -29,7 +29,8 @@
         <br />
         <button id="buttonCargar">Cargar Informacion</button> 
         </div>
-        <div style="float:right; width:50%">
+        <div style="float:right; width:50%; overflow:scroll">
+        
         
         </div>
     
