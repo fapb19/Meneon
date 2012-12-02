@@ -9,8 +9,15 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 }
+#footer {
+}
+#Contenido {
+	background-color: #096;
+}
+
 #header {
 	background-color: #06C;
+	margin-top:25px;
 	padding-top: 70px;
 	padding-right: 20px;
 	padding-bottom: 30px;
@@ -19,4 +26,3 @@ body {
 #navbar {
 	background-color: #6FF;
 }
-
