@@ -10,7 +10,7 @@
   <div id="header">
     <div id="navbar">
     	<a href="default.php">HOME</a>
-        <a href="">MAPA</a>
+        <a href="Mapas.php">MAPA</a>
         <a href="">ALBERGUES</a>
         <a href="">REDES SOCIALES</a>
     </div>
