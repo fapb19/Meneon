@@ -18,7 +18,7 @@
   </div>
   <div id="Container">
   	<div id=Contenido>
-    	<iframe src="http://disastercontrol.webege.com/ejemplo3.html" height="60%" width="100%" frameborder="0"></iframe>
+    	<iframe src="http://disastercontrol.webege.com/mapadesastres.php" height="60%" width="100%" frameborder="0"></iframe>
     </div>
     <div id="footer"><h5 align="center">© 2012 TAC</h5></div>
   </div>
