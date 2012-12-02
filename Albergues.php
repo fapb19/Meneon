@@ -21,17 +21,23 @@
         <p>
             <label>Seleccione la zona: </label>
             <select id="listZona">
-                <option>GAM</option>
-                <option>Turrialba</option>
-                <option>San Carlos</option>
+                <option>San Jose</option>
+                <option>Cartago</option>
             </select>
         </p>
         <br />
         <button id="buttonCargar">Cargar Informacion</button> 
         </div>
         <div style="float:right; width:50%; overflow:scroll">
-        
-        
+        <div id="Albergue">
+            Nombre
+            </div>
+            <div id="Informacion">
+            	Capacidad Maxima: 
+            </div>
+            <div id="Informacion">
+            	Cantidad: 
+            </div>       
         </div>
     
     

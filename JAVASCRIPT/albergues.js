@@ -1,12 +1,16 @@
 // JavaScript Document
 
-function getHtmlAlbergue(pNumero,pTitulo,pImagen){
+function getHtmlAlbergue(Nombre, CapacidadMaxima, CantidadActual, Contacto, Estado, Longitud, Latitud){
 	var htmlTXT="";
-	htmlTXT+="<div class='ImagenActividad' id='Imagen"+pNumero+"'>";
-	htmlTXT+="<img class='Imagenes' src='"+pImagen+"' alt='perdida'>";				
+	htmlTXT+="<div class='Nombre' id='Nombre'>" + Nombre;
+	htmlTXT+="<div class='Informacion' id='capacidad'>Capacidad Maxima: " + CapacidadMaxima + " Cantidad: " + CantidadActual;				
+	htmlTXT+="<div class='Informacion' id='contacto'>Contacto: " + Contacto;
+	htmlTXT+="<div class='Informacion' id='estado'>Estado: " + Estado;				
+	htmlTXT+="<div class='Informacion' id='longitud'>Longitud: " + Longitud + " Latitud: " + Latitud;					
 	htmlTXT+="</div>";
-	htmlTXT+="<div class='TitulosActividades' id='Titulo"+pNumero+"'>";
-	htmlTXT+="<center><a href='CharlaIndividual.php?Titulo="+pTitulo+"' class='Subrayar'><h4>"+pTitulo+"</h4></a></center>";
+	htmlTXT+="</div>";
+	htmlTXT+="</div>";
+	htmlTXT+="</div>";	
 	htmlTXT+="</div>";
 	return htmlTXT;
 }
