@@ -1,0 +1,22 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #bfcecc;
+}
+#wrapper {
+	width: 1024px;
+	height:768px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#header {
+	background-color: #06C;
+	padding-top: 70px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 150px;
+}
+#navbar {
+	background-color: #6FF;
+}
+
