@@ -1,28 +1,79 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	background-color: #bfcecc;
+	background-color: #00AF9C;
 }
 #wrapper {
 	width: 1024px;
 	height:768px;
 	margin-right: auto;
 	margin-left: auto;
+	padding-top: 36px;
+	padding-bottom: 13px;
+	padding-left: 64px;
+	background-color: #FFF;
 }
-#footer {
+#Restringido {
+	float: left;
+	width: 213px;
+	margin-right: 20px;
 }
-#Contenido {
-	background-color: #096;
+.footerEnlaces {
+	font-size: 13px;
+	padding-top: 14px;
+}
+#CNE {
+	float: left;
+	width: 213px;
+	font-size: 24px;
+	border-right: 20px;
 }
 
-#header {
-	background-color: #06C;
-	margin-top:25px;
-	padding-top: 70px;
-	padding-right: 20px;
-	padding-bottom: 30px;
-	padding-left: 150px;
+#OVR {
+	float: left;
+	width: 213px;
+	border-left: 20px;
 }
+
+#IMN {
+	float: left;
+	width: 213px;
+	border-left:20px;
+}
+
+a{
+	text-decoration:none;
+}
+
+.imEnlaces {
+	width: 213px;
+}
+.Enlaces {
+	width: 213px;
+}
+
+#footer {
+	clear: both;
+	padding-right: 64px;
+}
+#footerMonitoreo {
+	font-size: 13px;
+	padding-top: 14px;
+}
+.encabezado {
+	font-size: 24px;
+	padding-top: 28px;
+	padding-right: 0px;
+	padding-bottom: 34px;
+	padding-left: 0px;
+}
+.encabezado span {
+	color: #FFF;
+}
+
 #navbar {
-	background-color: #6FF;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
 }
